@@ -1,9 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Home from "../pages/Home";
+
 import About from "../pages/About";
 import CarSell from "../pages/CarSell";
 import Contact from "../pages/Contact";
+import CarListing from "../pages/CarListing";
+import CarDetails from "../pages/CarDetails";
+import Blog from "../pages/Blog";
+import BlogDetails from "../pages/BlogDetails";
+import NotFound from "../pages/NotFound";
+import NewHome from "../pages/NewHome";
 
 
 const Router = createBrowserRouter([
@@ -13,12 +19,12 @@ const Router = createBrowserRouter([
     children:[
         {
             path:"/",
-            element:<Home></Home>
+            element:<NewHome></NewHome>
 
         },
         {
             path:"/home",
-            element:<Home></Home>
+            element:<NewHome></NewHome>
 
         },
         {
@@ -37,6 +43,31 @@ const Router = createBrowserRouter([
 
         },
 
+        {
+            path:"/cars",
+            element:<CarListing></CarListing>
+
+        },
+        {
+            path:"/cars/:slug",
+            element:<CarDetails></CarDetails>
+
+        },
+        {
+            path:"/blogs",
+            element:<Blog></Blog>
+
+        },
+        {
+            path:"/blogs/:slug",
+            element:<BlogDetails></BlogDetails>
+
+        },
+        {
+            path:"*",
+            element:<NotFound></NotFound>
+
+        },
 
 
         

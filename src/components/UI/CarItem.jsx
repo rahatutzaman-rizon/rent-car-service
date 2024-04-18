@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import '../../styles/car-item.css'
 import { Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
@@ -22,15 +22,15 @@ const CarItem = (props) => {
 
                         <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">
                             <span className='d-flex align-items-center gap-1'>
-                                <i class="ri-roadster-line"></i> {model} 
+                                <i className="ri-roadster-line"></i> {model} 
                             </span>
 
                             <span className='d-flex align-items-center gap-1'>
-                                <i class="ri-settings-5-line"></i> {automatic} 
+                                <i className="ri-settings-5-line"></i> {automatic} 
                             </span>
 
                             <span className='d-flex align-items-center gap-1'>
-                                <i class="ri-timer-flash-line"></i> {speed} 
+                                <i className="ri-timer-flash-line"></i> {speed} 
                             </span> 
                         </div>
 

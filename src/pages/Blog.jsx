@@ -6,6 +6,7 @@ import CommonSection from "../components/UI/CommonSection" ;
 import BlogList from '../components/UI/BlogList';
 
 
+
 const Blog = () => {
     return <Helmet title="Blogs">
         <CommonSection title="Blogs"></CommonSection>
@@ -15,6 +16,7 @@ const Blog = () => {
                     <Row>
                         <BlogList />
                         <BlogList />
+                       
                     </Row>
 
                 </Container>

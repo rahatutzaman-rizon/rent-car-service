@@ -11,18 +11,21 @@ import carData from '../assets/data/carData';
 import CarItem from '../components/UI/CarItem';
 import BecomeDriverSection from '../components/UI/BecomeDriverSection';
 import BlogList from '../components/UI/BlogList';
-import Footer from '../components/Footer/Footer';
+
 import { Helmet } from 'react-helmet';
 
 
 
 const Home = () => {
+
+    console.log("whyyy")
     return <Helmet title='Home'>
 
     {/* ============== HERO SECTION ============== */}
 
         <section className="p-0 hero__slider-section">
            <HeroSlider></HeroSlider>
+          
        
 
         <div className="hero__form">
@@ -103,8 +106,8 @@ const Home = () => {
             </Row>
         </Container>
     </section>
-
-<Footer></Footer>
+{/* 
+<Footer></Footer> */}
     </Helmet>
 };
 

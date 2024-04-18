@@ -2,7 +2,7 @@ import  { useRef } from 'react';
 import { Container, Row, Col, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import '../../styles/Header.css';
-import HeroSlider from '../UI/HeroSlider';
+
 
 const navLinks = [
     {
@@ -110,7 +110,7 @@ const Header = () => {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    <HeroSlider></HeroSlider>
+                   
                 </Container>
             </div>
         </header>

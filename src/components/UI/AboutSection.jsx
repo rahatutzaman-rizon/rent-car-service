@@ -12,7 +12,7 @@ const AboutSection = ({ aboutClass }) => {
                 <Row className="align-items-center">
                     <Col lg={6} md={6}>
                         <div className="about__section-content">
-                            <h4 className="section__subtitle mb-3">About Us</h4>
+                            
                             <h2 className="section__title mb-4">
                                 Welcome to Advance Car Rent Service
                             </h2>
