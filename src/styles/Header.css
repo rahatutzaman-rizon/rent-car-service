@@ -2,8 +2,8 @@
 /* =============/Header Top\============= */
 
 .header__top{
-    padding: 10px 0px;
-    background: #20e4a2;
+  
+    background: #120182;
     color: #06031c;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .header__top__help i{
-   color: #000d6b;
+   color: #120182;
    background: #fff;
    padding: 2px 4px;
    border-radius: 50%;
@@ -57,31 +57,34 @@
 }
 .logo h1 a{
     text-decoration: none;
-    color: #20e4a2;
-    font-weight: 900;
+    color: #120182;
+    font-weight: 700;
 }
 .logo h1{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .header__location span i {
-    font-size: 2.2rem;
-    color: #20e4a2;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #120182;
 }
 
-.header__location-content h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #20e4a2;
+.header__location-content  {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #120182;
 }
 .header__location-content h6 {
-    font-weight: 600;
-    color: #20e4a2;
+    
+    
+    font-size: small;
+    color:#120182;
 }
 
 
 .header__btn {
-    background: #20e4a2 !important;
+    background: #120182 !important;
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -98,7 +101,7 @@
     font-size: 0.9rem;
 }
 .header__btn a:hover {
-    color: #f64343;
+    color: #26b5f2;
 }
 
 
@@ -106,8 +109,9 @@
 
 
 .main__navbar{
-    padding: 15px 0px;
-    background: #0bd4a5;
+    padding: 3px;
+    background: #120182;
+    font-size: small;
     
 }
 
@@ -135,7 +139,7 @@
 }
 
 .nav__item:hover{
-    color: rgb(240, 72, 72);
+    color: rgb(14, 145, 226);
 }
 
 .search__box{
@@ -164,7 +168,12 @@
 }
 
 .nav__active{
-    color: #03120e;
+    color: #068fe5;
+    font-weight: 700;
+}
+.header-info{
+    font-size:xx-small;
+
 }
 
 

@@ -1,11 +1,11 @@
 // import all images from assets/images directory
 import img01 from "../all-images/cars-img/nissan-offer.png";
-import img02 from "../all-images/cars-img/offer-toyota.png";
-import img03 from "../all-images/cars-img/bmw-offer.png";
+import img02 from "../all-images/hiace.jpg";
+import img03 from "../all-images/newnoah.jpg";
 import img04 from "../all-images/cars-img/nissan-offer.png";
 import img05 from "../all-images/cars-img/offer-toyota.png";
 import img06 from "../all-images/cars-img/mercedes-offer.png";
-import img07 from "../all-images/cars-img/toyota-offer-2.png";
+import img07 from "../all-images/platz.jpg";
 import img08 from "../all-images/cars-img/mercedes-offer.png";
 
 const carData = [
@@ -13,7 +13,7 @@ const carData = [
     id: 2,
     brand: "Toyota",
     rating: 102,
-    carName: "Toyota Deluxe",
+    carName: "Toyota Platz",
     imgUrl: img07,
     model: "Model-2022",
     price: 5200,
@@ -73,7 +73,7 @@ const carData = [
     price: 6200,
     speed: "20 mpg",
     gps: "GPS Navigation",
-    seatType: "Cloth seats",
+    seatType: "Leather seats",
     automatic: "Automatic",
     description: "The Toyota Hi-Ace Super GL is a versatile and reliable van suitable for group transportation, cargo hauling, and long-distance travel. It offers a spacious interior, comfortable seating, and ample cargo space.",
     carRentalService: "AC/Non AC Toyota X-Noah/Hi-Ace Super GL/Car rental",

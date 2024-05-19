@@ -1,9 +1,9 @@
 
 
 .footer{
-    background: #0bd4a5;
+    background: #120182;
     /* color: #fff; */
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 15px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .footer__logo-content{
-    color: rgba(0, 255, 255, 0.795);
+    color: rgba(221, 240, 240, 0.795);
     margin-top: 15px;
     line-height: 30px;
     
@@ -30,7 +30,7 @@
     background: transparent !important;
 }
 .quick__link a{
-    color: rgba(0, 255, 255, 0.795);
+    color: rgba(194, 232, 232, 0.795);
     text-decoration: none;
     transition: 0.3sec;
 }

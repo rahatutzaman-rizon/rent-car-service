@@ -17,18 +17,18 @@ const navLinks = [
         path: '/cars',
         display: 'Cars'
     },
-    {
-        path: '/blogs',
-        display: 'Blog'
-    },
+    // {
+    //     path: '/blogs',
+    //     display: 'Blog'
+    // },
     {
         path: '/contact',
         display: 'Contact'
     },
-    {
-        path: '/sell',
-        display: 'Car Sell'
-    },
+    // {
+    //     path: '/sell',
+    //     display: 'Car Sell'
+    // },
 ];
 
 const Header = () => {
@@ -38,54 +38,70 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="header__middle">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col xs={12} sm={4} lg={4} md={3} className="order-2 order-sm-1">
-                            <div className="logo">
-                                <h1>
-                                    <Link to="/home" className="d-flex align-items-center gap-3">
-                                        <i className="ri-car-line"></i>
-                                        <span>Advance Rent a Car Services</span>
-                                    </Link>
-                                </h1>
-                            </div>
-                        </Col>
+       <div className="header-top">
+    <Container>
+        <Row className="align-items-center">
+            <Col xs={12} md={10} className="order-md-1">
+                <div className="logo">
+                    <h1>
+                        <Link to="/home" className="d-flex align-items-center">
+                            <img
+                                className="logo-img "
+                                src="https://i.ibb.co/jkzkt6m/Rent-A-Car.png"
+                                alt="Logo"
+                                style={{ width: '120px', height: '80px', marginRight: '2px' }}
+                            />
+                            <span className="logo-text fs-5">Advance Rent a Car Services,Dinajpur</span>
+                        </Link>
+                    </h1>
+                </div>
+            </Col>
 
-                        <Col xs={12} sm={4} lg={3} md={3} className="order-3 order-sm-2">
-                            <div className="header__location d-flex align-items-center gap-2">
-                                <span>
-                                    <i className="ri-earth-line"></i>
-                                </span>
-                                <div className="header__location-content">
-                                    <h4>Suihari Micro Stand</h4>
-                                    <h4>Dinajpur-5200</h4>
-                                </div>
-                            </div>
-                        </Col>
+            <Col xs={12} md={2} className="order-md-2 d-flex justify-content-md-end ">
+                <div className="header-info d-flex align-items-center gap-4">
+                    <div className="header__location d-flex align-items-center gap-2 ">
+                        <span>
+                            <i className="ri-earth-line"></i>
+                        </span>
+                        <div className="header__location-content ">
+                            <h6 className='fs-7'>Suihari Micro-Stand,Dinajpur</h6>
+                            <h6></h6>
+                        </div>
+                    </div>
 
-                        <Col xs={12} sm={4} lg={3} md={3} className="order-4 order-sm-3">
-                            <div className="header__location d-flex align-items-center gap-2">
-                                <span>
-                                    <i className="ri-time-line"></i>
-                                </span>
-                                <div className="header__location-content">
-                                    <h4>Available Time</h4>
-                                    <h6>24 Hours</h6>
-                                </div>
-                            </div>
-                        </Col>
+                    <div className="header__location d-flex align-items-center gap-2">
+                        <span>
+                            <i className="ri-time-line"></i>
+                        </span>
+                        <div className="header__location-content">
+                            <h6 className="fs-7 ">Available <span className="fw-bold fs-6">24/7</span> Hours</h6>
+                           
+                        </div>
+                    </div>
+                    
+                    <div className="header__location d-flex align-items-center gap-2">
+                        
+                        <Link to="https://web.facebook.com/profile.php?id=61557768972452&mibextid=qi2Omg&rdid=pdd2VyaCDEjAlz1m">
+                        <span>
+                            <i className="ri-facebook-box-fill rounded"></i>
+                        </span> 
+                        </Link>
+                        
+                        
+                    </div>
 
-                        <Col xs={12} sm={0} lg={2} md={3} className="order-1 order-sm-4 d-flex align-items-center justify-content-sm-end">
-                            <button className="header__btn btn">
-                                <Link to="https://maps.app.goo.gl/5pQBrhT2hbNfdbzc7">
-                                    <i className="ri-map-pin-line"></i>Location
-                                </Link>
-                            </button>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                    <button className="header__btn btn">
+                        <Link to="https://maps.app.goo.gl/5pQBrhT2hbNfdbzc7">
+                            <i className="ri-map-pin-line"></i>Location
+                        </Link>
+                    </button>
+
+                    
+                </div>
+            </Col>
+        </Row>
+    </Container>
+</div>
 
             <div className="main__navbar">
                 <Container>
@@ -97,9 +113,9 @@ const Header = () => {
                         <Navbar.Collapse id="responsive-navbar-nav" ref={menuRef}>
                             <Nav className="menu">
                                 {navLinks.map((item, index) => (
-                                    <NavLink
+                                    <NavLink  
                                         to={item.path}
-                                        className={(navClass) =>
+                                        className= {(navClass) =>
                                             navClass.isActive ? 'nav__active nav__item' : 'nav__item'
                                         }
                                         key={index}

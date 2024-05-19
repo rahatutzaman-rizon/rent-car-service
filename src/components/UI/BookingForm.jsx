@@ -13,11 +13,9 @@ const BookingForm = () => {
     return <Form onSubmit={submitHandler}>
 
         <FormGroup className='booking__form d-inline-block me-4 mb-b' >
-                <input type="text" placeholder='First Name'/>
+                <input type="text" placeholder=' Name'/>
         </FormGroup>
-        <FormGroup className='booking__form d-inline-block ms-1 mb-b' >
-                <input type="text" placeholder='Last Name'/>
-        </FormGroup>
+        
 
         <FormGroup className='booking__form d-inline-block me-4 mb-b' >
                 <input type="email" placeholder='Email'/>
@@ -39,18 +37,11 @@ const BookingForm = () => {
                     <option value="2 person"> 2 Person</option>
                     <option value="3 person"> 3 Person</option>
                     <option value="4 person"> 4 Person</option>
-                    <option value="6+ person">6+ Person </option>
+                    <option value="4 person"> 8 Person</option>
+                    <option value="6+ person">8+ Person </option>
                 </select>
         </FormGroup>
-        <FormGroup className='booking__form d-inline-block ms-1 mb-b' >
-                <select name="" id="">
-                    <option value="1 luggage"> 1 Luggage</option>
-                    <option value="2 luggage"> 2 Luggage</option>
-                    <option value="3 luggage"> 3 Luggage</option>
-                    <option value="4 luggage"> 4 Luggage</option>
-                    <option value="5+ luggage">5+ Luggage</option>
-                </select>
-        </FormGroup>
+       
 
         <FormGroup className='booking__form d-inline-block me-4 mb-b' >
                 <input type="date" placeholder='Journey Date'/>
@@ -60,7 +51,7 @@ const BookingForm = () => {
         </FormGroup>
 
         <FormGroup>
-                <textarea rows={5} type="textarea" className='textarea' placeholder='Write'></textarea>
+                <textarea rows={1} type="textarea" className='textarea' placeholder='Write'></textarea>
         </FormGroup>
 
         

@@ -1,124 +1,77 @@
-import  { useEffect } from 'react';
-
-import carData from "../assets/data/carData" ;
-import { Container , Row , Col } from 'reactstrap';
+import React, { useEffect } from 'react';
+import carData from "../assets/data/carData";
+import { Container, Row, Col, Button, Card, ListGroup } from 'react-bootstrap';
 import Helmet from '../components/Helmet/Helmet';
 import { useParams } from 'react-router-dom';
 import BookingForm from '../components/UI/BookingForm';
-// import PaymentMethod from '../components/UI/PaymentMethod';
-import { Button } from 'react-bootstrap';
-
 
 const CarDetails = () => {
+  const { slug } = useParams();
+  const singleCarItem = carData.find(item => item.carName === slug);
 
-    const {slug} = useParams()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [singleCarItem]);
 
-    const singleCarItem = carData.find( item => item.carName === slug )
-
-    useEffect(()=> {
-
-        window.scrollTo(0, 0);
-
-    }, [singleCarItem]) ; 
-
-
-    return <Helmet title={singleCarItem.carName} >
-        <section>
-            <Container>
-                <Row>
-                    <Col lg='6'>
-                        <img src={singleCarItem.imgUrl} alt="" className='w-100' />
-                    </Col>
-
-                    <Col lg='6'>
-                        <div className="car__info">
-                            <h2 className='section__title'>{singleCarItem.carName}</h2>
-
-                            <div className="d-flex align-items-center gap-5 mb-4 mt-3">
-                                    <h6 className="rent__price fw-bold fs-4">
-                                          Tk: {singleCarItem.price}.00 / Day
-                                    </h6>
-                                    
-                                    <span className='d-flex align-items-center gap-2'>
-                                        <span style={{color:"#f9a826"}}>
-                                            <i className="ri-star-s-fill"></i>
-                                            <i className="ri-star-s-fill"></i>
-                                            <i className="ri-star-s-fill"></i>
-                                            <i className="ri-star-s-fill"></i>
-                                            <i className="ri-star-s-fill"></i>
-                                        </span>
-
-                                        ({singleCarItem.rating} ratings)
-                                    </span>
-
-                            </div>
-
-                            <p className="section__description">
-                                {singleCarItem.description}
-                            </p>
-
-                            <div className="d-flex align-items-center mt-3" style={{columnGap: "4rem"}}>
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                  <i className="ri-roadster-line" style={{color:"#f9a826"}}></i> {singleCarItem.model}
-                               </span>
-
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                  <i className="ri-settings-2-line" style={{color:"#f9a826"}}></i> {singleCarItem.automatic}
-                               </span>
-
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                  <i className="ri-timer-flash-line" style={{color:"#f9a826"}}></i>{singleCarItem.speed}
-                               </span>
-                               
-                            </div>
-
-
-                            <div className="d-flex align-items-center mt-3" style={{columnGap: "2.8rem"}}>
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                  <i className="ri-map-pin-2-line" style={{color:"#f9a826"}}></i> {singleCarItem.gps}
-                               </span>
-
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                  <i className="ri-wheelchair-line" style={{color:"#f9a826"}}></i> {singleCarItem.seatType}
-                               </span>
-
-                               <span className="d-flex align-items-center gap-1
-                               section__description ">  
-                                 <i className="ri-building-2-line" style={{color:"#f9a826"}}></i> {singleCarItem.brand}
-                               </span>
-                               
-                            </div>
-                        </div>
-                    </Col>
-
-
-                    <Col lg="7" className='mt-5'>
-                        <div className="booking-info mt-5">
-                            <h5 className='mb-4 fw-bold'>Booking Information</h5>
-
-                            <BookingForm></BookingForm>
-                           <Button>Booking Now</Button>
-                        </div>
-                    </Col>
-
-                    <Col lg="5" className='mt-5'>
-                        <div className="payment__info mt-5">
-                            <h5 className='mb-4 fw-bold'>Payment Information</h5>
-
-                            <h2>Bkash / Nogod: </h2>
-                        </div>
-                    </Col>
-
-                    
-                </Row>
-            </Container>
-        </section>
+  return (
+    <Helmet title={singleCarItem.carName}>
+      <section className="py-5">
+        <Container>
+          <Row>
+            <Col lg="6">
+              <img src={singleCarItem.imgUrl} alt="" className="w-100 rounded" />
+            </Col>
+            <Col lg="6">
+              <Card className="shadow-lg">
+                <Card.Body>
+                  <Card.Title as="h4" className="section__title">{singleCarItem.carName}</Card.Title>
+                  <Card.Text className="section__description" style={{ fontSize: '14px' }}>
+                    {singleCarItem.description}
+                  </Card.Text>
+                  <ListGroup variant="flush">
+                    {singleCarItem.features.map((feature, index) => (
+                      <ListGroup.Item key={index} className="d-flex align-items-center">
+                        <i className="ri-checkbox-circle-line text-success me-2"></i>
+                        <span style={{ fontSize: '14px' }}>{feature}</span>
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col lg="7">
+              <div className="booking-info">
+                <h5 className="mb-4 fw-bold">Booking Information</h5>
+                <BookingForm />
+                <Button style={{ backgroundColor: '#120182' }} className="mt-4">
+                  Book Now
+                </Button>
+              </div>
+            </Col>
+            <Col lg="5">
+              <div className="payment__info">
+                <h5 className="mb-4 fw-bold">Payment Information</h5>
+                <p className="section__description">
+                  You can pay with your through Bkash/Nogod.
+                </p>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div>
+                    <p className="mb-0">Bkash/Nogod:</p>
+                    <h6 className="fw-bold">01841-649121</h6>
+                  </div>
+                  <div>
+                    <img className="width-4" src="https://i.ibb.co/2ntPv85/bkash.png" alt="Payment Logo" />
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
+  );
 };
 
 export default CarDetails;
