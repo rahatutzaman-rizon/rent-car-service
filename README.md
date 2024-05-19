@@ -35,10 +35,9 @@ Start the server
 <img width="1434" alt="Screenshot 2024-04-15 at 8 37 40 PM" src="https://i.ibb.co/dQJMJ3N/Screen-Shot-Tool-20240519202625.png">
 <img width="1440" alt="Screenshot 2024-04-15 at 8 32 37 PM" src="https://i.ibb.co/02Rr45s/Screen-Shot-Tool-20240519202600.png">
 <img width="1440" alt="Screenshot 2024-04-15 at 8 32 48 PM" src="https://i.ibb.co/82gVjV6/Screen-Shot-Tool-20240519202637.png">
-<img width="1438" alt="Screenshot 2024-04-15 at 8 33 06 PM" src="https://i.ibb.co/JcY2pHB/Screen-Shot-Tool-20240519202746.png
-">
-<img width="1440" alt="Screenshot 2024-04-15 at 8 33 25 PM" src="https://i.ibb.co/f8136W7/Screen-Shot-Tool-20240519202657.png
-">
+<img width="1438" alt="Screenshot 2024-04-15 at 8 33 06 PM" src="https://i.ibb.co/JcY2pHB/Screen-Shot-Tool-20240519202746.png">
+<img width="1440" alt="Screenshot 2024-04-15 at 8 33 25 PM" src="https://i.ibb.co/f8136W7/Screen-Shot-Tool-20240519202657.
+png">
 
 
 
